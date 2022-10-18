@@ -23,12 +23,18 @@ int main() {
 
             if(text[i] == alphabet[j]) {
 
-                result.push_back(alphabet[j + shift]);
+                if(j + shift > alphabet.size() - shift){
+
+                    result.push_back(alphabet[j -26 + shift]);
+
+                } else {
+
+                    result.push_back(alphabet[j + shift]);
+                }
             }
         }
-
-
     }
+
 
     for(int i = 0; i < result.size(); i++) {
 
